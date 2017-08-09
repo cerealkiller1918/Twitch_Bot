@@ -1,6 +1,6 @@
 language: java
 sudo: false
-script: mvn verfty
+script: mvn test
 group: stable
 dist: precise
 os: linux
