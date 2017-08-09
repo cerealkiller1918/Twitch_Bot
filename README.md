@@ -1,2 +1,2 @@
-#Twitch Bot 
-##By Justin Frasier
+# Twitch Bot 
+## By Justin Frasier
