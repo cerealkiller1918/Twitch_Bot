@@ -1,19 +1,23 @@
 package com.justinfrasier.irc;
 
 public class Irc {
-    public static String getMessage(String input){
-        String[] strings = input.split(":");
-        return  strings[2];
-    }
-    public static String getUserName(String input){
-        String UserName = input.split("!")[0];
-        UserName = UserName.replace(":","");
-        return UserName;
+    private String message,userName,channel;
+
+    public Irc(String input){
+        message = input.split(":")[2];
+        userName = input.split("!")[0].replace(":","");
+        channel = input.split("#")[1].split(":")[0].trim();
     }
 
-    public static String getChannel(String input){
-        String channel = input.split("#")[1];
-        channel = channel.split(":")[0].trim();
+    public String getMessage() {
+        return message;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getChannel() {
         return channel;
     }
 }
